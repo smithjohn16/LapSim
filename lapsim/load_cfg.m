@@ -1,4 +1,4 @@
-function [ae, bat, co, dlne, dr, h, l, mo, sen, tc, ti, tk, v] = load_cfg(filename, rev)
+function [ae, bat, co, dlne, dr, h, l, mo, sen, tc, ti, v] = load_cfg(filename, rev)
   %%%% load_cfg.m %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % This function loads the requested configuration    %
   % file and returns each class with loaded values     %
@@ -19,7 +19,6 @@ function [ae, bat, co, dlne, dr, h, l, mo, sen, tc, ti, tk, v] = load_cfg(filena
   sen = sensors(table2array(values(3:end, 18)));      % Convert sensor values
   tc = tctv(table2array(values(3:end, 20)));          % Convert TC/TV values
   ti = tires();                                       % Construct tire class
-  tk = track(table2array(values(3:end, 24)));         % Convert track values
   v = vd(table2array(values(3:end, 26)));             % Convert VD values
 end
   
